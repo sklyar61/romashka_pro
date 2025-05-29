@@ -1,0 +1,68 @@
+.logo-col img {
+    width: 15%;
+    margin-left: 10px;
+    position: relative; 
+    z-index: 4; 
+  }
+
+/* Добавьте в ваш wm.css */
+.navbar {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.navbar .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 991px) {
+  .navbar-toggler {
+      order: 2;
+      margin-left: 1rem !important;
+  }
+  
+  .logo-col {
+      order: 1;
+  }
+  
+  .navbar-collapse {
+      order: 3;
+      width: 100%;
+  }
+}
+
+/* Стили для десктопной версии */
+@media (min-width: 992px) {
+  .navbar-collapse {
+      flex-grow: 0;
+  }
+}
+
+.message-placeholder {
+  transition: opacity 0.3s ease-out;
+}
+
+.message {
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: messageAppear 0.3s ease-out forwards;
+}
+
+@keyframes messageAppear {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+

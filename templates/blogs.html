@@ -1,0 +1,246 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'blogs.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <meta property="og:title" content="Romashka.pro Ваш надежный партнер">
+    <meta property="og:description" content="новости в мире цифровых технологий">
+    <meta property="og:url" content="https://romashka.pro">
+    
+    <title>Romashka.pro</title>
+
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(94103796, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/94103796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <style>
+    @keyframes twinkling {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    
+    .star {
+        position: absolute;
+        background-color: #ffffff;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        animation: twinkling 1s infinite alternate;
+        z-index: -1;
+    }
+    </style>
+</head>
+<body style="background-color:#02161f;">
+    <header>
+        <div container class="containerheader">
+            <div class="row align-items-center header-row">
+                <div class="col-2 logo-col">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'logo.png' %}" alt="Логотип" class="img-fluid">
+                    </a>
+                </div>                
+                <div class="col-9 text-col">
+                    <p>Образование строит мосты...Невежество роет рвы</p>
+                </div>
+                <div class="col-1 button-col">
+                    <button class="navbar-toggler btn-unstyled dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{% url 'conect' %}">Связаться с нами</a></li>
+                        <li><a class="dropdown-item" href="https://t.me/romashka_pro_bot">ИИ в Телеграм</a></li>
+                        <li><a class="dropdown-item" href="{% url 'blogs' %}">Блог</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <div class="containerblog">
+        <div class="row1 align-items-center">
+            <div class="col-2 text-start">
+                <p class="blog-text">Блог</p>
+            </div>
+        </div>
+        <hr class="custom-line">
+    </div>    
+
+    <div class="container-fluid mt-3">
+        <div class="row align-items-center" style="height: 40px;">
+            <div class="col d-flex align-items-center justify-content-start">
+                <h4 class="select-text">Выберите интересующий Вас раздел из списка <br>или прочтите</h4>
+                <button class="btn btn-dropdown dropdown-toggle ml-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {% for item in categories %}
+                        <li><a class="dropdown-item" href="{% url 'blogs' %}?category={{ item.id }}">{{ item.name }}</a></li>
+                    {% endfor %}
+                </ul>                
+            </div>
+        </div>
+    </div>
+    
+
+    <h4 class="last_tema"> Последние темы:</h4>
+    <hr class="custom-line3">
+           
+    <!-- Разобраться со статьями -->
+   
+    <div class="container mt-5">
+        <div class="row gy-4 gx-4">
+            {% for article in articles %}
+                <div class="col-sm-12 col-md-6 col-xl-3">
+                    <div class="card rounded-5 shadow-lg">
+                        <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{% url 'article_detail' article_id=article.id %}" class="text-decoration-none text-dark">
+                                    {{ article.title|safe }}
+                                </a>
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted text-end">{{ article.category|safe }}</h6>
+                            <p class="card-text">{{ article.content|truncatechars:150|safe }}</p>
+                            <p class="card-text">
+                                <small class="text-muted">{{ article.date_created|date:"d M, Y"|safe }}</small>
+                                <a href="{% url 'article_detail' article_id=article.id %}" class="text-decoration-none text-primary ml-2">
+                                    Читать далее
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    
+    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if articles.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ articles.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% for i in articles.paginator.page_range %}
+                    {% if articles.number == i %}
+                        <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ articles.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    
+      
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-icons">
+                <div class="dropdown icon-wrapper">
+                    <img src="{% static 'phone.svg' %}" alt="Телефон" id="phoneDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <ul class="dropdown-menu" aria-labelledby="phoneDropdown">
+                        <li><a class="dropdown-item" href="#">+7-999-699-99-79</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown icon-wrapper">
+                    <img src="{% static 'telegram.svg' %}" alt="Telegram" id="telegramDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <ul class="dropdown-menu" aria-labelledby="telegramDropdown">
+                        <li><a class="dropdown-item" href="#">@romashka.pro</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-text">
+                <p>© 2023 Romashka.pro&AI </p>
+                <p>ИП Ромашкин Р.В, ИНН 614761813055</p>
+                <p>гор.Каменск-Шахтинский ул. Гагарина 71 Б</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const starsCount = 200; // количество звезд на фоне
+    
+        for (let i = 0; i < starsCount; i++) {
+            const star = document.createElement("div");
+            star.classList.add("star");
+    
+            star.style.top = Math.random() * window.innerHeight + "px";
+            star.style.left = Math.random() * window.innerWidth + "px";
+            star.style.animationDelay = Math.random() * 2 + "s"; // разная задержка для разных звезд
+    
+            document.body.appendChild(star);
+        }
+    });
+    </script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const element = document.querySelector(".text-col p");
+        const text1 = "Образование строит мосты...";
+        const text2 = "Невежество роет рвы";
+        const typingDelay = 50; // 
+        const sentenceDelay = 2000; 
+        const repeatDelay = 3000; 
+        const fullTextDisplayDelay = 1000; 
+        const maxRepeats = 3; 
+    
+        let currentRepeat = 0;
+    
+        function typeText(text, index = 0) {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                setTimeout(() => typeText(text, index + 1), typingDelay);
+            } else if (text === text1) {
+                setTimeout(() => typeText(text2), sentenceDelay);
+            } else if (text === text2 && currentRepeat < maxRepeats - 1) {
+                currentRepeat++;
+                setTimeout(() => {
+                    element.textContent = ""; 
+                    typeText(text1); 
+                }, fullTextDisplayDelay + repeatDelay);
+            }
+        }
+    
+        element.textContent = ""; 
+        typeText(text1); 
+    });
+    
+    </script>
+</body>
+</html>

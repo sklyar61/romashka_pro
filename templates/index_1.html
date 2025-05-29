@@ -1,0 +1,313 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <meta property="og:title" content="Romashka.pro Ваш надежный партнер">
+    <meta property="og:description" content="бизнес-услуги на стыке технологий">
+    <meta property="og:url" content="https://romashka.pro">
+    
+    <title>Romashka.pro</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(94103796, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/94103796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+    
+</head>
+<body style="background-color:#039ee6;">
+    <header class="p-3 text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <div class="d-flex flex-wrap flex-lg-nowrap justify-content-lg-between align-items-start align-items-lg-center">
+                    <div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+                        <button class="btn btn-link contact-info-btn d-lg-none me-3" data-bs-toggle="collapse" data-bs-target="#emailInfo" aria-expanded="false" aria-controls="emailInfo">
+                            <i class="bi bi-envelope-fill"></i>
+                        </button>
+                        <div class="collapse d-lg-flex" id="emailInfo">
+                            <p class="d-none d-lg-block me-lg-3"><i class="bi bi-envelope-fill"></i></p>
+                            <p>roman@ipromashkin.ru</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+                        <button class="btn btn-link contact-info-btn d-lg-none me-3" data-bs-toggle="collapse" data-bs-target="#telegramInfo" aria-expanded="false" aria-controls="telegramInfo">
+                            <i class="bi bi-telegram"></i>
+                        </button>
+                        <div class="collapse d-lg-flex" id="telegramInfo">
+                            <p class="d-none d-lg-block me-lg-3"><i class="bi bi-telegram"></i></p>
+                            <p><a href="https://t.me/romashka_pro_bot" style="color: white;" target="_blank">Romashka.pro</a></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center me-sm-3">
+                        <button class="btn btn-link contact-info-btn d-lg-none me-3" data-bs-toggle="collapse" data-bs-target="#phoneInfo" aria-expanded="false" aria-controls="phoneInfo">
+                            <i class="bi bi-telephone-fill"></i>
+                        </button>
+                        <div class="collapse d-lg-flex" id="phoneInfo">
+                            <p class="d-none d-lg-block me-lg-3"><i class="bi bi-telephone-fill"></i></p>
+                            <p>+7 999 699 99 91</p>
+                        </div>
+                    </div>
+                </div>                  
+                <div>
+                    <a href="https://t.me/romashka_pro_bot" class="btn btn-warning">Искусственный <br>интеллект</a>
+                </div>
+            </div>
+        </div>
+        
+              
+    </header>
+    
+    <div class="container-fluid px-0">
+        <div class="row p-0">
+            <div class="col-12 position-relative p-0">
+                <img src="{% static 'star.png' %}" class="img-fluid bg-img" alt="Image">
+                <div class="slogan w-50 h-100 d-flex align-items-center justify-content-center">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h3 class="carousel-slogan">Улсуги <br> web-разработки</h3>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 class="carousel-slogan">Услуги <br>маркетинга</h3>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 class="carousel-slogan">Услуги <br> Консалтинга</h3>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 class="carousel-slogan"> Искусственный <br> интеллект</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container h-100 d-flex justify-content-center align-items-center px-0">
+        <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner block">
+                <div class="carousel-item active" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Моя цель: <br> помочь вашему бизнесу <br>преуспеть в цифровом мире</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="6000">
+                    <div class="text-center ">
+                        <h3>Я работаю на стыке технологий, юриспруденции, маркетинга и консалтинга  Поэтому готов предложить лучшие решения</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Вместе мы преодолеем любые вызовы и добьемся успеха</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Посмотрите мои преимущества <br> и узнайте, как я помогу Вам<br> выйти на новый уровень</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6" data-aos="fade-left">
+                <div class="card">
+                    <img src="{% static 'champion.jpg' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Эффективные решения</h5>
+                        <p class="card-text">Нахожу инновационные пути для оптимизации расходов и повышения эффективности вашего бизнеса. Вместе мы преобразим сложности в возможности.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-right">
+                <div class="card">
+                    <img src="{% static '123.jpg' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Коммерческий опыт</h5>
+                        <p class="card-text">С более чем десятилетним опытом в коммерции и двумя высшими образованиями в области финансов и оценки стоимости предприятий я готов помочь Вашему бизнесу .</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-left">
+                <div class="card">
+                    <img src="{% static 'parts.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Постоянные клиенты- ценный актив</h5>
+                        <p class="card-text">Именно таким принципом руководствуюсь. Для меня важно доверие и я стремлюсь отвечать  интересам клиентов, обеспечивая преимущество и признание.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-right">
+                <div class="card">
+                    <img src="{% static 'ai_kids.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Искусственный интеллект в вашем распоряжении</h5>
+                        <p class="card-text">Продвиньтесь в будущее с помощью нашего AI-консультанта. Откройте новые возможности с интеллектом следующего поколения. Успейте занять первые места.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container h-100 d-flex justify-content-center align-items-center px-0">
+        <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner block">
+                <div class="carousel-item one-block active" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Будщее Вашего бизнеса <br> начинается здесь</h3>
+                    </div>
+                </div>
+                <div class="carousel-item one-block" data-bs-interval="6000">
+                    <div class="text-center ">
+                        <h3>Для меня нет ограничений-<br> Найду консенсус в любой сфере </h3>
+                    </div>
+                </div>
+                <div class="carousel-item one-block" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Выбирай необходимую услугу<br> и оставляй заявку</h3>
+                    </div>
+                </div>
+                <div class="carousel-item one-block" data-bs-interval="6000">
+                    <div class="text-center">
+                        <h3>Работаем с агентами<br> платим до 70%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12" data-aos="fade-right">
+                <div class="card mb-4">
+                    <img src="{% static 'image1.png' %}" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">IT-разработка</h5>
+                        <p class="card-text">Разработка web-приложений и умных ботов под Ваши нужды. Обучу модель искусственного интеллекта под Ваши задачи. Оставьте заявку <br> и получите консультацию. </p>
+                        <a href="https://t.me/romahka_pro_bot" class="btn btn-primary">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12" data-aos="fade-left">
+                <div class="card mb-4">
+                    <img src="{% static 'image2.png' %}" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Маркетинг</h5>
+                        <p class="card-text">Бойцовский маркетинг: бъем в цель, разрушаем стереотипы. Разработаем концепцию, подберем стратегию под Ваши нужды и бюджет.Быстро, эффективно, неотразимо. Вместе взорвем рынок! </p>
+                        <a href="https://t.me/romahka_pro_bot" class="btn btn-primary">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12" data-aos="fade-right">
+                <div class="card mb-4">
+                    <img src="{% static 'image3.png' %}" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Консалтинг</h5>
+                        <p class="card-text">Бескомпромиссный консалтинг! Перед нами не устоит ни одна задача. Разгоним бизнес до максимальных скоростей при минимальных расходах. Только надежные и легальные схемы. Дерзайте с нами!</p>
+                        <a href="https://t.me/romahka_pro_bot" class="btn btn-primary">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12" data-aos="fade-left">
+                <div class="card mb-4">
+                    <img src="{% static 'image4.png' %}" class="card-img-top" alt="Service 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Искусственный интеллект</h5>
+                        <p class="card-text">AI без компромиссов! Он не вытеснит человека, но человек с AI обойдет человека без него. Бизнес в руках сверхинтеллекта..Ммм-Пушка! Присоединяйтесь к эволюции сейчас!</p>
+                        <a href="https://t.me/romahka_pro_bot" class="btn btn-primary">Получить доступ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5 text-center">
+        <h2 class="mb-4">Вступая на борт нашего космического корабля Искусственного Интеллекта важно помнить:</h2>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6" data-aos="fade-left">
+                <div class="card">
+                    <img src="{% static 'vanga.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <p class="card-text">ИИ может быть умным, но пока что мысли читать не умеет. Так что прежде, чем вспылить, подумайте как точнее задать вопрос. Старайтесь быть ясными и конкретными, чем точнее сформулирован вопрос- тем точнее ответ - ведь ИИ - не Ванга!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-right">
+                <div class="card">
+                    <img src="{% static 'internet.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <p class="card-text">Наш ИИ - отличный парень, но у него есть свои ограничения. Он обучался до сентября 2021 года, и с тех пор отказался от доступа к интернету. Что бы вы ни спросили о последних модах или мемах, он будет как путешественник заблудившийся во времени.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-left">
+                <div class="card">
+                    <img src="{% static 'task.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <p class="card-text">Не бросайте на ИИ все сразу. Он может испугаться! Для наибольшей эффективности, разбейте сложные задачи на меньшие этапы. Это позволит идти шаг за шагом, давая ИИ возможность обработать информацию корректно.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-right">
+                <div class="card">
+                    <img src="{% static 'jump.png' %}" class="card-img-top" alt="Benefit 1">
+                    <div class="card-body">
+                        <p class="card-text">И, наконец, помните - путешествие с ИИ - это, прежде всего исследование и приключение. Это может быть путь полный трудностей и препятствий, но ведь именно так обретают новые навыки и становятся сильным Человеком!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 text-center">
+        <h2 class="mb-4">Стройте диалог, экспериментируйте и, самое главное, наслаждайтесь общением с ИИ! Удачи вам в этом невероятном путешествии в ногу со временем.</h2>
+        <a href="https://t.me/romahka_pro_bot" class="btn btn-warning">AI-Консультант</a>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-white footer" style="background-color: #ffc107;">
+        <div class="container py-2">
+            <!-- Add your company info here -->
+            <p>ИП Ромашкин Р.В ИНН 614761813055 
+                г. Каменск-Шахтинский ул. Гагарина 71Б</p>
+        </div>
+        <div class="footer-bottom-row d-flex justify-content-center py">
+            <div class="footer-bottom-text">
+                Romashka.pro&AI. Все права защищены. Copyright 2023
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

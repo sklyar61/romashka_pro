@@ -1,0 +1,141 @@
+.p-3.text-white {
+    color: #039ee6 !important;
+    background: #00aeff !important;
+}
+.btn.btn-link.contact-info-btn {
+    color: white !important;
+    font-size: 20px !important;
+}
+
+.bi {
+    color: white !important;
+    font-size: 20px !important;
+}
+
+.collapse{
+    color: white;
+}
+.container.row.col-12 img {
+    box-shadow: 0 0 30px #4ec3ee;
+    position: relative;
+    background-color: #00bbff !important;
+}
+.bg-img {
+    box-shadow: 0 0 30px #80d3f1;
+    background-color: #00bbff !important;  
+}
+
+
+.slogan {
+    position: absolute;
+    width: 50%; /* Измените на нужный вам размер */
+    height: auto; /* Если вы хотите, чтобы высота автоматически подстраивалась под содержимое */
+    top: 20%; /* Положение от верхнего края */
+    left: 36%; /* Положение от левого края */
+    transform: translate(-50%, -50%); /* Сдвигает элемент обратно на 50% его собственной ширины и высоты, чтобы выровнять его по центру */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slogan {
+    color: white;
+    font-size: 5vw;  
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+.carousel-inner.block {
+    color: white !important;
+    padding:70px;
+    font-style: italic;
+    height: 250px; 
+    
+}
+
+.text-center h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.card {
+    background-color: #0194c5;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 30px #00bfff;
+    font-style: italic;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.row .col-lg-3 .card {
+    flex: 1 1 auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    box-shadow: 0 0 20px #b5e2f1; 
+}
+
+.card .card-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+}
+.card .card-text{
+    color: #ffffff;
+}
+.card-img-top {
+    width: 100%;   
+    object-fit: cover;  
+    margin: 0 auto; 
+    
+}
+
+.btn-warning {
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ffc107;
+}
+.btn-warning:hover {
+    background-color: #00bfff;
+}
+.mb-4 {
+    font-style: italic;
+    color: white;
+}
+
+
+.mt-4.lead{
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+.container.py-2 {
+    font-weight: bold; 
+    font-style: italic;
+    margin-top: 30px; 
+} 
+.footer-bottom-text {
+    box-shadow: 0 0 10px #00bfff;
+    margin-top: -10px;
+}
