@@ -1,11 +1,14 @@
 import React from 'react';
 import HeroSection from './components/HeroSection';
+import ServicesSection from './components/ServicesSection';
+import ProjectsSection from './components/ProjectsSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <HeroSection />
-      {/* Далее: секция Направления и Реализованные проекты */}
+      <ServicesSection />
+      <ProjectsSection />
     </div>
   );
 }
