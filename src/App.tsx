@@ -1,15 +1,20 @@
 import React from 'react';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import ProjectsSection from './components/ProjectsSection';
+import FullPageContainer from './components/FullPageContainer';
+import HeroSlide from './components/HeroSection';
+import ServiceSlides from './components/ServiceSlide';
+import ProjectsSlides from './components/ProjectsSection';
+import AgentsSlide from './components/AgentsSlide';
+import AboutSlide from './components/AboutSlide';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <ServicesSection />
-      <ProjectsSection />
-    </div>
+    <FullPageContainer>
+      <HeroSlide />
+      <ServiceSlides />
+      <ProjectsSlides />
+      <AgentsSlide />
+      <AboutSlide />
+    </FullPageContainer>
   );
 }
 

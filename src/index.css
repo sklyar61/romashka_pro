@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+}
+
+#root {
+  height: 100%;
+}

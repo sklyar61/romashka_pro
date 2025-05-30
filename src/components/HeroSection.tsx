@@ -1,16 +1,19 @@
 import React from 'react';
 
-export default function HeroSection() {
+export default function HeroSlide() {
   return (
-    <section className="py-20 bg-primary text-white">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl font-bold mb-4">
-          Romashka.pro — уникальные решения на стыке IT, финансов и юриспруденции
-        </h1>
-        <p className="text-lg mb-8">
-          Я специализируюсь на создании нейросетей и продуктов, которые помогают бизнесу работать эффективнее, понятнее и безопаснее.
-        </p>
-      </div>
+    <section className="container snap-start h-screen flex flex-col items-center justify-center bg-white">
+      <img
+        src="/assets/logo.png"
+        alt="Romashka.pro logo"
+        className="w-full max-w-xs h-auto mb-3"
+      />
+      <h1 className="text-center text-4xl font-bold text-primary mb-2">
+        Уникальные решения на стыке IT, финансов и юриспруденции
+      </h1>
+      <p className="max-w-2xl mx-auto text-gray-700 text-lg indent-4">
+        Создание нейросетей и продуктов, которые помогают бизнесу работать эффективнее, понятнее и безопаснее
+      </p>
     </section>
   );
 }
